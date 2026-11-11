@@ -1,0 +1,10 @@
+project: savantenvs/FISCO-BCOS
+target: fuzz_abi_type
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_abi_type/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_abi_type
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/fuzz_abi_type/fuzz_abi_type.dict
